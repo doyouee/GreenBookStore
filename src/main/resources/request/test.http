@@ -1,0 +1,39 @@
+PUT http://localhost:9988/api/book/add/book
+Content-Type: application/json
+
+{
+     "biTitle": "디 에센셜: 장미의 이름(완전판)",                         
+     "biSubTitle": "| 양장본 Hardcover",                            
+     "biPrice": 31500,   
+     "biDiscount" : 0.1,                      
+     "biBenefit": 0.05,                           
+     "biAlarm": "[단독/한정] 디 에센셜 열린책들 1편",                         
+     "biPublicDt": "2022-11-30T00:00:00",                          
+     "biPublisher":"열린책들",
+     "biAuthor":"움베르토 에코 저자(글) · 이윤기 번역",
+     "biDiSeq":1,
+     "biIiSeq":1                   
+}
+
+#########################################################
+
+PUT http://localhost:9988/api/book/add/delivery
+Content-Type: application/json
+
+{
+     "diMinPrice" : 10000,
+     "diPrice" : 0,
+     "diDay" : "상품주문 후 2~3일 이내"
+}
+
+########################################################
+
+GET http://localhost:9988/api/book/list/book
+
+########################################################
+
+GET http://localhost:9988/api/book/list/delivery
+
+########################################################
+
+GET http://localhost:9988/api/book/list/image
